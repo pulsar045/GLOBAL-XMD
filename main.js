@@ -3174,7 +3174,331 @@ break;
     m.reply('Error occurred while processing the X.com download.');
   }
 }
-break;	
+break;
+					//Text Pro Menu
+				case 'mascot': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/mascot?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+			case 'foggy': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/foggy?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'galaxy': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/galaxy?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+				case 'golden': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/golden?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'mettalic': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/mettalic?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'gradient': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/gradient?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+				case 'metal': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/metal?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'jewel': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/jewel?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'blackpink': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/blackpink?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+				case 'sand': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/sand?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'gaming': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/gaming?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'colorful': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/colorful?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+				case 'matrix': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/matrix?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'wings': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/angelwing?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'hacker': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/hacker?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+				case 'logo': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/circlemascot?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
+case 'typography': case 'typo': {
+    if (!text) {
+        return m.reply(`Example: ${prefix + command} text`);
+    }
+    try {
+m.react('⏳')
+        const url = `https://gtech-api-xtp1.onrender.com/api/ephoto/typography?text=${encodeURIComponent(text)}&apikey=${apikey}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (!data.status || !data.result || !data.result.imageUrl) throw new Error('Invalid API response');
+        await qasim.sendFileUrl(m.chat, data.result.imageUrl, `${text}`, m);
+m.react('✅')
+    } catch (e) {
+m.react('❎')
+        m.reply('Server Offline or Data Unavailable!');
+    }
+}
+break;
 			// Quotes Menu
 			case 'motivation': {
     try {
@@ -4602,6 +4926,25 @@ break;
 │${setv} ${prefix}group set
 │${setv} ${prefix}group
 ╰─┬────❍
+╭─┴❍「 *TEXTPRO* 」❍
+│${setv} ${prefix}mascot
+│${setv} ${prefix}foggy
+│${setv} ${prefix}galaxy
+│${setv} ${prefix}golden
+│${setv} ${prefix}mettalic
+│${setv} ${prefix}gradient
+│${setv} ${prefix}metal
+│${setv} ${prefix}jewel
+│${setv} ${prefix}gaming
+│${setv} ${prefix}sand
+│${setv} ${prefix}blackpink
+│${setv} ${prefix}colorful
+│${setv} ${prefix}matirx
+│${setv} ${prefix}wings
+│${setv} ${prefix}hacker
+│${setv} ${prefix}logo
+│${setv} ${prefix}typo
+╰─┬────❍
 ╭─┴❍「 *SEARCH* 」❍
 │${setv} ${prefix}ytsearch
 │${setv} ${prefix}spotify
@@ -4919,6 +5262,29 @@ break;
 │${setv} ${prefix}listonline
 │${setv} ${prefix}group set
 │${setv} ${prefix}group
+╰──────❍`)
+			}
+			break
+				case 'textpro': {
+				m.reply(`
+╭──❍「 *TEXTPRO* 」❍
+│${setv} ${prefix}mascot
+│${setv} ${prefix}foggy
+│${setv} ${prefix}galaxy
+│${setv} ${prefix}golden
+│${setv} ${prefix}mettalic
+│${setv} ${prefix}gradient
+│${setv} ${prefix}metal
+│${setv} ${prefix}jewel
+│${setv} ${prefix}gaming
+│${setv} ${prefix}sand
+│${setv} ${prefix}blackpink
+│${setv} ${prefix}colorful
+│${setv} ${prefix}matirx
+│${setv} ${prefix}wings
+│${setv} ${prefix}hacker
+│${setv} ${prefix}logo
+│${setv} ${prefix}typo
 ╰──────❍`)
 			}
 			break
