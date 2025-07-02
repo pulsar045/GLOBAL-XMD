@@ -4841,12 +4841,6 @@ break;
 			}
 			break
 			case 'allmenu': {
-				let profile
-				try {
-					profile = await qasim.profilePictureUrl(m.sender, 'image');
-				} catch (e) {
-					profile = fake.anonim
-				}
 				const menunya = `
 ╭──❍「 *USER INFO* 」❍
 ├ *Name* : ${m.pushName ? m.pushName : 'No Name'}
@@ -5163,37 +5157,19 @@ break;
 │${setv} > 🅞
 │${setv} < 🅞
 ╰──────❍`
-				await m.reply({
-					document: fake.docs,
-					fileName: ucapanWaktu,
-					mimetype: pickRandom(fake.listfakedocs),
-					fileLength: '100000000000000',
-					pageCount: '999',
-					caption: menunya,
-					contextInfo: {
-						mentionedJid: [m.sender, '0@s.whatsapp.net', owner[0] + '@s.whatsapp.net'],
-						forwardingScore: 10,
-						isForwarded: true,
-						forwardedNewsletterMessageInfo: {
-							newsletterJid: my.ch,
-							serverMessageId: null,
-							newsletterName: 'Join For More Info'
-						},
-						externalAdReply: {
-							title: author,
-							body: packname,
-							showAdAttribution: true,
-							thumbnailUrl: profile,
-							mediaType: 1,
-							previewType: 0,
-							renderLargerThumbnail: true,
-							mediaUrl: my.gh,
-							sourceUrl: my.gh,
-						}
-					}
-				})
-			}
-			break
+const caption = `${menunya}\n\nPlease use ${prefix}allmenu\nTo see all the menus`;
+
+    const imagePath = path.join(__dirname, '.', 'src', 'media', 'global.png');
+    if (!fs.existsSync(imagePath)) {
+        return m.reply('Menu image not found, please check the path.');
+    }
+    await qasim.sendMessage(m.chat, {
+        image: fs.readFileSync(imagePath),
+        caption: caption,
+        mentions: [m.sender]
+    }, { quoted: m });
+			}		
+break
 				case 'set': case 'setting': case 'settings': {
 				m.reply(`
 ╭──❍「 *SETTING* 」❍
