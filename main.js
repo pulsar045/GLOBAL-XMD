@@ -84,9 +84,10 @@ module.exports = qasim = async (qasim, m, msg, store, groupCache) => {
 		const text = q = args.join(' ')
 		const mime = (quoted.msg || quoted).mimetype || ''
 		const qmsg = (quoted.msg || quoted)
-		const hari = moment.tz('Asia/Karachi').locale('id').format('dddd');
-		const tanggal = moment.tz('Asia/Karachi').locale('id').format('DD/MM/YYYY');
-		const jam = moment.tz('Asia/Karachi').locale('id').format('HH:mm:ss');
+                const timezone = global.timezone
+		const hari = moment.tz(timezone).locale('en').format('dddd');
+		const tanggal = moment.tz(timezone).locale('en').format('DD/MM/YYYY');
+		const jam = moment.tz(timezone).locale('en').format('HH:mm:ss');
 		const ucapanWaktu = jam < '05:00:00' ? 'Good Early Morning 🌉' : jam < '11:00:00' ? 'Good Morning 🌄' : jam < '15:00:00' ? 'Good Afternoon 🏙' : jam < '18:00:00' ? 'Good Evening 🌅' : jam < '19:00:00' ? 'Good Evening 🌃' : jam < '23:59:00' ? 'Good Night 🌌' : 'Good Night 🌌';
 		const almost = 0.72
 		const time = Date.now()
@@ -175,7 +176,7 @@ module.exports = qasim = async (qasim, m, msg, store, groupCache) => {
 			}
 		}, {
 			scheduled: true,
-			timezone: 'Asia/Karachi'
+			timezone: global.timezone
 		});
 		
 		// Auto Set Bio
@@ -319,7 +320,7 @@ module.exports = qasim = async (qasim, m, msg, store, groupCache) => {
 		if (this.intervalSholat) clearInterval(this.intervalSholat); 
 		setTimeout(() => {
 			this.intervalSholat = setInterval(async() => {
-				const sekarang = moment.tz('Asia/Karachi');
+				const sekarang = moment.tz(timezone);
 				const jamSholat = sekarang.format('HH:mm');
 				const hariIni = sekarang.format('YYYY-MM-DD');
 				const detik = sekarang.format('ss');
@@ -329,7 +330,7 @@ module.exports = qasim = async (qasim, m, msg, store, groupCache) => {
 						this.waktusholat[sholat] = hariIni
 						for (const [idnya, settings] of Object.entries(db.groups)) {
 							if (settings.waktusholat) {
-								await qasim.sendMessage(idnya, { text: `Time *${sholat}* has arrived, take ablution and immediately pray🙂.\n\n*${waktu.slice(0, 5)}*\n_for Karachi and surrounding areas._` }, { ephemeralExpiration: m.expiration || store?.messages[idnya]?.array?.slice(-1)[0]?.metadata?.ephemeralDuration || 0 }).catch(e => {})
+								await qasim.sendMessage(idnya, { text: `Time *${sholat}* has arrived, take ablution and immediately pray🙂.\n\n*${waktu.slice(0, 5)}*\n_for ${timezone} and surrounding areas._` }, { ephemeralExpiration: m.expiration || store?.messages[idnya]?.array?.slice(-1)[0]?.metadata?.ephemeralDuration || 0 }).catch(e => {})
 							}
 						}
 					}

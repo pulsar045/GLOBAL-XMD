@@ -1,3 +1,16 @@
+/*
+
+	* Create By GlobalTechInfo
+
+	* Follow https://github.com/GlobalTechInfo
+
+	* Whatsapp : https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07
+
+*/
+
+
+require('dotenv').config();
+
 require('./settings');
 
 const fs = require('fs');
