@@ -4851,7 +4851,7 @@ break;
 ├ *Money* : ${db.users[m.sender] ? db.users[m.sender].money.toLocaleString('id-ID') : '0'}
 ╰─┬────❍
 ╭─┴─❍「 *BOT INFO* 」❍
-├ *Name Bot* : ${botname}
+├ *App* : ${botname}
 ├ *Owner* : @${owner[0].split('@')[0]}
 ├ *Mode* : ${qasim.public ? 'Public' : 'Self'}
 ├ *Prefix* :${set.multiprefix ? '「 MULTI-PREFIX 」' : ' *'+prefix+'*' }
@@ -5158,7 +5158,7 @@ break;
 │${setv} > 🅞
 │${setv} < 🅞
 ╰──────❍`
-const caption = `${menunya}\n\nPlease use ${prefix}allmenu\nTo see all the menus`;
+const caption = `${menunya}\n© GlobalTechInfo`;
 
     const imagePath = path.join(__dirname, '.', 'src', 'media', 'global.png');
     if (!fs.existsSync(imagePath)) {
