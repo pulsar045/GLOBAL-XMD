@@ -41,7 +41,9 @@
 <h2 align="center">  NOTE
 </h2>
 
-**Remember If you going to deploy in panel,render or koyeb. you have to enter your number in settings.js before deployment. Format: global.number_bot = '92320xx'**
+- **Session ID Isn't Needed, Bot Requires Only Environment Variable Named BOT_NUMBER.**
+- **After Adding Your Number In .env Simply Deploy The Bot And It Will Show You A Pairing Code At The End Of Deployment**
+- **Just Link Your WhatsApp With That Code And Start Using Bot.**
 
 ----
 
@@ -77,26 +79,10 @@
       </td>
     </tr>
     <tr>
-      <td>Glitch</td>
-      <td>
-        <a href="https://glitch.com/edit/#!/import/github/GlobalTechInfo/GLOBAL-XMD">
-          <img src="https://img.shields.io/badge/Deploy_to-Glitch-indigo?style=for-the-badge&logo=glitch&logoColor=white" alt="Deploy to Glitch">
-        </a>
-      </td>
-    </tr>
-    <tr>
       <td>Render</td>
       <td>
         <a href="https://dashboard.render.com/web/new">
           <img src="https://img.shields.io/badge/Deploy_to-Render-brown?style=for-the-badge&logo=render&logoColor=white" alt="Deploy to Render">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>Cyclic</td>
-      <td>
-        <a href="https://app.cyclic.sh/api/app/deploy/GlobalTechInfo/GLOBAL-XMD">
-          <img src="https://img.shields.io/badge/Deploy_to-Cyclic-blue?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Deploy to Cyclic">
         </a>
       </td>
     </tr>
