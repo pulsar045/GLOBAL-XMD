@@ -10,7 +10,7 @@ const chalk = require('chalk');
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
 
-global.owner = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(',').map(v => v.trim()) : ['923204566005'];
+global.owner = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(',').map(v => v.trim()) : ['254720736160'];
 
 global.packname = process.env.PACKNAME || 'BOT';
 global.author = process.env.AUTHOR || 'GlobalTechInfo';
@@ -22,7 +22,7 @@ global.tempatDB = process.env.MONGODB_URI || 'database.json';
 global.tempatStore = process.env.MONGODB_URI || 'baileys_store.json';
 global.timezone = process.env.TIME_ZONE || 'UTC'
 global.pairing_code = process.env.PAIRING_CODE !== 'false';
-global.number_bot = process.env.BOT_NUMBER || '';
+global.number_bot = process.env.BOT_NUMBER || '254720736160';
 
 global.my = {
 	yt: process.env.MY_YOUTUBE || 'https://youtube.com/@GlobalTechInfo',
